@@ -104,9 +104,6 @@ function SetRating(rate) {
 
         if (rate.classList.contains("active")) {
             localStorage.setItem("rating", rate.dataset.rating);
-
-            ratingCard.classList.remove("active");
-            thankYouCard.classList.add("active");
         }
         userRating.textContent = userSelectedRating;
     });
