@@ -28,12 +28,31 @@ let maxRating = Math.max(
 
 totalRating.textContent = maxRating;
 
-let userSelectedRating;
+let userSelectedRating, rating;
 
 submitButton.disabled = true;
 submitButton.style.opacity = 0.1;
 submitButton.style.transition =
     "opacity 0.8s ease, background-color 0.8s ease, color 0.8s ease";
+
+rating = JSON.parse(localStorage.getItem("rating"));
+
+switch (rating) {
+    case 1:
+        ratingOne.classList.add("selected");
+        break;
+    case 2:
+        ratingTwo.classList.add("selected");
+        break;
+    case 3:
+        ratingThree.classList.add("selected");
+        break;
+    case 4:
+        ratingFour.classList.add("selected");
+        break;
+    case 5:
+        ratingFive.classList.add("selected");
+}
 
 ratingOne.addEventListener("click", () => {
     SetRating(ratingOne);
@@ -84,7 +103,10 @@ function SetRating(rate) {
         ratingFive.classList.remove("selected");
 
         if (rate.classList.contains("active")) {
-            rate.classList.add("selected");
+            localStorage.setItem("rating", rate.dataset.rating);
+
+            ratingCard.classList.remove("active");
+            thankYouCard.classList.add("active");
         }
         userRating.textContent = userSelectedRating;
     });
