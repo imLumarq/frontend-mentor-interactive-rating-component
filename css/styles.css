@@ -14,6 +14,7 @@
     --selected-background-color: hsl(216, 12%, 54%);
     --card-color: hsl(213, 19%, 18%);
     --body-background-color: hsl(216, 12%, 8%);
+    --rating-background-color: hsl(210, 26%, 15%);
 
     /**************************
     Typography
@@ -22,7 +23,7 @@
     --font-family: "Overpass", sans-serif;
 
     /*15px*/
-    --font-size: 0.9375rem;
+    --font-size: 1rem;
     --weight-400: 400;
     --weight-700: 700;
 }
@@ -40,9 +41,23 @@ Global reset
     padding: 0;
 }
 
+ul {
+    list-style-type: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size);
+}
+
+p {
+    color: var(--para-text-color);
+}
+
 html {
     color-scheme: dark;
-    font-size: var(--font-size);
 }
 
 html,
@@ -55,9 +70,93 @@ main {
 
 body {
     background: var(--body-background-color);
+    line-height: 1.8;
+    font-size: var(--font-size);
 }
 
 main {
     display: grid;
     place-items: center;
 }
+
+.card {
+    flex-direction: column;
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    display: none;
+    width: 80vw;
+    max-width: 450px;
+    gap: 2rem;
+}
+
+.card.active {
+    display: flex;
+}
+
+/**************************
+Rating card
+**************************/
+.star {
+    border-radius: var(--border-radius-circle);
+    background-color: var(--rating-background-color);
+    padding: 1rem;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-card ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-card ul li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-card ul li>button {
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: var(--border-radius-circle);
+    color: var(--para-text-color);
+    background-color: var(--rating-background-color);
+}
+
+.rating-card ul li>button.active {
+    color: white;
+    background-color: var(--para-text-color);
+}
+
+.rating-card ul li>button:hover,
+.rating-card ul li>button:focus {
+    transition: background-color 1s ease, color 1s ease;
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.rating-card>button {
+    background-color: var(--accent-color);
+    border-radius: calc(var(--border-radius) * 2);
+    padding: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: white;
+}
+
+.rating-card>button:hover,
+.rating-card>button:focus {
+    transition: background-color 1s ease, color 1s ease;
+    background-color: var(--white);
+    color: var(--accent-color);
+}
+
+/**************************
+Thank you card
+**************************/
