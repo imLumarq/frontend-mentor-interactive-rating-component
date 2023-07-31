@@ -11,6 +11,10 @@ const ratingFive = document.getElementById("btn-five");
 const submitButton = document.getElementById("btn-submit");
 
 /*-------------------------------rating amounts-------------------------------*/
+const ratingCard = document.querySelector(".rating-card");
+const thankYouCard = document.querySelector(".thank-you-card");
+
+/*-------------------------------rating amounts-------------------------------*/
 const userRating = document.querySelector("#user-rating");
 const totalRating = document.querySelector("#total-rating");
 
@@ -25,6 +29,11 @@ let maxRating = Math.max(
 totalRating.textContent = maxRating;
 
 let userSelectedRating;
+
+submitButton.disabled = true;
+submitButton.style.opacity = 0.1;
+submitButton.style.transition =
+    "opacity 1s ease, background-color 1s ease, color 1s ease";
 
 ratingOne.addEventListener("click", () => {
     SetRating(ratingOne);
@@ -56,8 +65,9 @@ function SetRating(rate) {
         case 3:
         case 4:
         case 5:
+            submitButton.disabled = false;
+            submitButton.style.opacity = 1;
             userSelectedRating = rate.dataset.rating;
-            console.log(userSelectedRating);
             rate.classList.add("active");
             break;
 
@@ -67,6 +77,15 @@ function SetRating(rate) {
     }
 
     submitButton.addEventListener("click", () => {
+        ratingOne.classList.remove("selected");
+        ratingTwo.classList.remove("selected");
+        ratingThree.classList.remove("selected");
+        ratingFour.classList.remove("selected");
+        ratingFive.classList.remove("selected");
+
+        if (rate.classList.contains("active")) {
+            rate.classList.add("selected");
+        }
         userRating.textContent = userSelectedRating;
     });
 }
