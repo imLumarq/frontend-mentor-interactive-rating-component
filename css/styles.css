@@ -52,6 +52,10 @@ button {
     font-size: var(--font-size);
 }
 
+button:disabled {
+    cursor: none;
+}
+
 p {
     color: var(--para-text-color);
 }
@@ -85,7 +89,7 @@ main {
     border-radius: var(--border-radius);
     padding: 2rem;
     display: none;
-    width: 80vw;
+    width: 90vw;
     max-width: 450px;
     gap: 2rem;
 }
@@ -127,6 +131,7 @@ Rating card
     border-radius: var(--border-radius-circle);
     color: var(--para-text-color);
     background-color: var(--rating-background-color);
+    transition: background-color 1s ease, color 1s ease;
 }
 
 .rating-card ul li>button.selected {
@@ -137,7 +142,6 @@ Rating card
 .rating-card ul li>button:hover,
 .rating-card ul li>button:focus,
 .rating-card ul li>button.active {
-    transition: background-color 1s ease, color 1s ease;
     background-color: var(--accent-color);
     color: var(--white);
 }
@@ -151,9 +155,8 @@ Rating card
     color: white;
 }
 
-.rating-card>button:hover,
-.rating-card>button:focus {
-    transition: background-color 1s ease, color 1s ease;
+.rating-card>button:not(:disabled):hover,
+.rating-card>button:not(:disabled):focus {
     background-color: var(--white);
     color: var(--accent-color);
 }
