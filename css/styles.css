@@ -81,6 +81,7 @@ body {
 main {
     display: grid;
     place-items: center;
+    padding-block: 2rem;
 }
 
 .card {
@@ -125,13 +126,16 @@ Rating card
 }
 
 .rating-card ul li>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 4rem;
     height: 4rem;
     padding: 1rem;
     border-radius: var(--border-radius-circle);
     color: var(--para-text-color);
     background-color: var(--rating-background-color);
-    transition: background-color 1s ease, color 1s ease;
+    transition: background-color 0.8s ease, color 0.8s ease;
 }
 
 .rating-card ul li>button.selected {
@@ -183,4 +187,24 @@ Thank you card
 
 .thank-you-card>p {
     text-align: center;
+}
+
+/**************************
+Responsiveness
+**************************/
+
+/*450px*/
+@media screen and (max-width: 28.125em) {
+    .rating-card ul li>button {
+        width: 2.9rem;
+        height: 2.9rem;
+    }
+}
+
+/*340px*/
+@media screen and (max-width: 21.25em) {
+    .rating-card ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
