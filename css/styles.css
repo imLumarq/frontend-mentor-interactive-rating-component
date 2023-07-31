@@ -129,13 +129,14 @@ Rating card
     background-color: var(--rating-background-color);
 }
 
-.rating-card ul li>button.active {
+.rating-card ul li>button.selected {
     color: white;
     background-color: var(--para-text-color);
 }
 
 .rating-card ul li>button:hover,
-.rating-card ul li>button:focus {
+.rating-card ul li>button:focus,
+.rating-card ul li>button.active {
     transition: background-color 1s ease, color 1s ease;
     background-color: var(--accent-color);
     color: var(--white);
@@ -160,3 +161,23 @@ Rating card
 /**************************
 Thank you card
 **************************/
+
+.thank-you-card {
+    height: 501.03px;
+    align-items: center;
+}
+
+.thank-you-card>img {
+    flex: 1;
+}
+
+.rating {
+    background-color: var(--rating-background-color);
+    color: var(--accent-color);
+    padding: 0.5rem;
+    border-radius: calc(var(--border-radius) * 2);
+}
+
+.thank-you-card>p {
+    text-align: center;
+}
