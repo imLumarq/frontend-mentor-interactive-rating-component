@@ -33,7 +33,7 @@ let userSelectedRating;
 submitButton.disabled = true;
 submitButton.style.opacity = 0.1;
 submitButton.style.transition =
-    "opacity 1s ease, background-color 1s ease, color 1s ease";
+    "opacity 0.8s ease, background-color 0.8s ease, color 0.8s ease";
 
 ratingOne.addEventListener("click", () => {
     SetRating(ratingOne);
