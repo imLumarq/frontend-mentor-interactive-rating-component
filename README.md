@@ -45,6 +45,7 @@ Users should be able to:
 
 ### Links
 
+-   Solution URL: (https://www.frontendmentor.io/solutions/interactive-rating-component-3SQTklTar0)
 -   Live Site URL: (https://imlumarq.github.io/frontend-mentor-interactive-rating-component)
 -   Github Repository: (https://github.com/imLumarq/frontend-mentor-interactive-rating-component)
 
