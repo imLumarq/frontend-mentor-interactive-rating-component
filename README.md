@@ -24,7 +24,29 @@ Users should be able to:
 
 ### Screenshot
 
+![initial boot](./images/screenshots/initial-boot.png)
+![initial hover rating](./images/screenshots/initial-hover-rating.png)
+![initial rating selected](./images/screenshots/initial-rating-selected.png)
+![initial hover submit button](./images/screenshots/initial-hover-submit-button.png)
+![initial desktop thank you](./images/screenshots/initial-desktop-thank-you.png)
+
+![second boot](./images/screenshots/second-boot.png)
+![second hover rating](./images/screenshots/second-hover-rating.png)
+![second rating selected](./images/screenshots/second-hover-sumbit-button.png)
+![second hover submit button](./images/screenshots/second-hover-sumbit-button.png)
+![second desktop thank you](./images/screenshots/second-desktop-thank-you.png)
+
+![iphone se rating](./images/screenshots/iphone-se-rating.png)
+![iphone se thank you](./images/screenshots/iphone-se-thank-you.png)
+
+![samsung galaxy fold part one](./images/screenshots/samsung-galaxy-fold-rating-part-one.png)
+![samsung galaxy fold part two](./images/screenshots/samsung-galaxy-fold-rating-part-two.png)
+![samsung galaxy fold thank you](./images/screenshots/samsung-galaxy-fold-thank-you.png)
+
 ### Links
+
+-   Live Site URL: (https://imlumarq.github.io/frontend-mentor-interactive-rating-component)
+-   Github Repository: (https://github.com/imLumarq/frontend-mentor-interactive-rating-component)
 
 ## My process
 
