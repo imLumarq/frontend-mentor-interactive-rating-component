@@ -52,6 +52,8 @@ switch (rating) {
         break;
     case 5:
         ratingFive.classList.add("selected");
+        break;
+
 }
 
 ratingOne.addEventListener("click", () => {
